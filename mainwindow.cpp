@@ -29,51 +29,25 @@ void MainWindow::on_biaslist_clicked()
 
 }
 
-void MainWindow::on_actionBinary_directory_triggered()
-{
-}
-
-void MainWindow::on_actionCalibration_directory_triggered()
-{
-
-    QString dir = QFileDialog::getExistingDirectory(this, tr("Open Calibration Directory"),
-                                                    QDir::homePath(),
-                                                    QFileDialog::ShowDirsOnly
-                                                    );
-
-    if (!dir.isEmpty()) {
-        caldir = dir; // save global variable
-    }
-
-    qDebug() << "user chose calib dir" << caldir;
-}
-
-void MainWindow::on_actionPhotometry_directory_triggered()
-{
-
-    QString dir = QFileDialog::getExistingDirectory(this, tr("Open Photometry Directory"),
-                                                    QDir::homePath(),
-                                                    QFileDialog::ShowDirsOnly
-                                                    );
-
-    if (!dir.isEmpty()) {
-        photdir = dir; // save global variable
-    }
-
-    qDebug() << "user chose calib dir" << photdir;
-
-}
-
 void MainWindow::on_action_set_paths_triggered()
 {
     DirectoryDialog myDialog(this);
     myDialog.setBinDir(bindir);
+    myDialog.setCalDir(caldir);
+    myDialog.setPhotDir(photdir);
+    myDialog.setFourierDir(fourierdir);
 
     if (myDialog.exec()) { // user pushed "OK"
         bindir = myDialog.getBinDir();
+        caldir = myDialog.getCalDir();
+        photdir = myDialog.getPhotDir();
+        fourierdir = myDialog.getFourierDir();
 
         qDebug() << "set bindir to" << bindir;
+        qDebug() << "set caldir to" << caldir;
+        qDebug() << "set photdir to" << photdir;
+        qDebug() << "set fourierdir to" << fourierdir;
     }
 
-    qDebug() << "dirs:" << bindir << caldir << photdir;
+    qDebug() << "dirs:" << bindir << caldir << photdir << fourierdir;
 }

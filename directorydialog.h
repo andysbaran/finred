@@ -16,11 +16,22 @@ public:
     ~DirectoryDialog();
 
     QString getBinDir();
-
     void setBinDir(QString dir);
+    QString getCalDir();
+    void setCalDir(QString dir);
+    QString getPhotDir();
+    void setPhotDir(QString dir);
+    QString getFourierDir();
+    void setFourierDir(QString dir);
 
 private slots:
-    void on_binbutton_clicked();
+    void on_binbrowse_clicked();
+
+    void on_calbrowse_clicked();
+
+    void on_photbrowse_clicked();
+
+    void on_fourierbrowse_clicked();
 
 private:
     Ui::DirectoryDialog *ui;

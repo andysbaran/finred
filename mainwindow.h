@@ -21,18 +21,12 @@ private slots:
 
     void on_biaslist_clicked();
 
-    void on_actionBinary_directory_triggered();
-
-    void on_actionCalibration_directory_triggered();
-
-    void on_actionPhotometry_directory_triggered();
-
     void on_action_set_paths_triggered();
 
 private:
     Ui::MainWindow *ui;
 
-    QString bindir,caldir,photdir;
+    QString bindir,caldir,photdir,fourierdir;
 };
 
 #endif // MAINWINDOW_H
