@@ -21,7 +21,10 @@ MainWindow::~MainWindow()
 void MainWindow::updateDirs()
 {
     QSettings settings("andysbaran", "finred");
-    bindir = settings.value("dirs/binary").toString();
+ //   bindir = settings.value("dirs/binary").toString();
+ //   caldir = settings.value("dirs/calibration").toString();
+ //   photdir = settings.value("dirs/photometry").toString();
+ //   fourierdir = settings.value("dirs/fourier").toString();
 }
 
 void MainWindow::on_biaslist_clicked()
