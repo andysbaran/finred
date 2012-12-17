@@ -31,7 +31,8 @@ void MainWindow::updateDirs()
 
 void MainWindow::on_biaslist_clicked()
 {
-
+    QDir::setCurrent(caldir);
+    system("ls bias*.fits >bias.cat");
 }
 
 void MainWindow::on_action_set_paths_triggered()

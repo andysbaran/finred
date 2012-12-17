@@ -6,26 +6,127 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>579</width>
+    <height>608</height>
    </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QPushButton" name="biaslist">
+   <widget class="QTabWidget" name="tabWidget">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>20</y>
-      <width>114</width>
-      <height>32</height>
+      <x>0</x>
+      <y>0</y>
+      <width>579</width>
+      <height>608</height>
      </rect>
     </property>
-    <property name="text">
-     <string>bias list</string>
+    <property name="currentIndex">
+     <number>0</number>
     </property>
+    <widget class="QWidget" name="tab1">
+     <attribute name="title">
+      <string>Calibration</string>
+     </attribute>
+     <widget class="QGroupBox" name="groupBox">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>221</width>
+        <height>121</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Bias</string>
+      </property>
+      <widget class="QPushButton" name="biaslist">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>20</y>
+         <width>75</width>
+         <height>32</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>file list</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="biaspatt">
+       <property name="geometry">
+        <rect>
+         <x>80</x>
+         <y>25</y>
+         <width>60</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>bias*</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>50</y>
+         <width>81</width>
+         <height>32</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>statistics</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_2">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>80</y>
+         <width>71</width>
+         <height>32</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>median</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QTextEdit" name="textdisplay">
+      <property name="geometry">
+       <rect>
+        <x>120</x>
+        <y>160</y>
+        <width>441</width>
+        <height>321</height>
+       </rect>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab2">
+     <attribute name="title">
+      <string>Photometry</string>
+     </attribute>
+    </widget>
+    <widget class="QWidget" name="tab3">
+     <attribute name="title">
+      <string>Fourier</string>
+     </attribute>
+    </widget>
+    <widget class="QWidget" name="tab4">
+     <attribute name="title">
+      <string>Plots</string>
+     </attribute>
+    </widget>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
@@ -33,7 +134,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>400</width>
+     <width>579</width>
      <height>22</height>
     </rect>
    </property>
@@ -76,6 +177,12 @@
   </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
+ <tabstops>
+  <tabstop>biaslist</tabstop>
+  <tabstop>biaspatt</tabstop>
+  <tabstop>textdisplay</tabstop>
+  <tabstop>tabWidget</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>
