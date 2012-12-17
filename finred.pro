@@ -14,10 +14,14 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    directorydialog.cpp
+    directorydialog.cpp \
+    dirvalidator.cpp \
+    validatedlineedit.cpp
 
 HEADERS  += mainwindow.h \
-    directorydialog.h
+    directorydialog.h \
+    dirvalidator.h \
+    validatedlineedit.h
 
 FORMS    += mainwindow.ui \
     directorydialog.ui

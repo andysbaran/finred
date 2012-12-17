@@ -86,7 +86,7 @@
     <string>Browse</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="photline">
+  <widget class="ValidatedLineEdit" name="photline">
    <property name="geometry">
     <rect>
      <x>105</x>
@@ -96,7 +96,7 @@
     </rect>
    </property>
   </widget>
-  <widget class="QLineEdit" name="fourierline">
+  <widget class="ValidatedLineEdit" name="fourierline">
    <property name="geometry">
     <rect>
      <x>105</x>
@@ -163,7 +163,7 @@
     <bool>true</bool>
    </property>
   </widget>
-  <widget class="QLineEdit" name="binline">
+  <widget class="ValidatedLineEdit" name="binline">
    <property name="geometry">
     <rect>
      <x>105</x>
@@ -179,7 +179,7 @@
     </sizepolicy>
    </property>
   </widget>
-  <widget class="QLineEdit" name="calline">
+  <widget class="ValidatedLineEdit" name="calline">
    <property name="geometry">
     <rect>
      <x>105</x>
@@ -234,6 +234,13 @@
    </property>
   </widget>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>ValidatedLineEdit</class>
+   <extends>QLineEdit</extends>
+   <header>validatedlineedit.h</header>
+  </customwidget>
+ </customwidgets>
  <tabstops>
   <tabstop>binline</tabstop>
   <tabstop>calline</tabstop>

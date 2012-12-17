@@ -33,7 +33,17 @@ private slots:
 
     void on_fourierbrowse_clicked();
 
+    void on_binline_textChanged(const QString &arg1);
+
+    void on_calline_textChanged(const QString &arg1);
+
+    void on_photline_textChanged(const QString &arg1);
+
+    void on_fourierline_textChanged(const QString &arg1);
+
 private:
+    void updateOkButton();
+
     Ui::DirectoryDialog *ui;
 };
 
